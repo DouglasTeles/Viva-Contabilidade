@@ -215,7 +215,9 @@ body {
     } }  
 
 .imgperfil{
-  height:25vh;
+  height:150px;
+  width: 150px;
+  border-radius:20px;
 }
 .icons{
   border: none;
@@ -252,3 +254,8 @@ label{
     margin-right: 0;
     margin-left: 25px;
   } } 
+
+#demo{
+  display:none;
+}
+

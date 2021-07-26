@@ -24,51 +24,51 @@
 
     </nav>
     
+    <a  class="navbar-list" href="/clientes">
+        Voltar a lista de Clientes
+     </a>
     <div class="container">
         <div class="card" id="form-cadastro">
             <div class="card-header">
-                <h2>Formulário de Cadastro</h2>
-                <a  class="navbar-list" href="/clientes">
-                    Lista de Clientes
-                </a>
+                <h2>Formulário de Edição</h2>
+              
             </div>
           
             <div class="card-body">
-                <form method="POST"  action = "/cliente/save" class="form">
+                <form method="POST" action = "/saveupdate" class="form">
                     
                     <label for="nome">Nome Completo</label>
-                    <input name="nome" type="text" class="form-control" id="nome" placeholder="Nome" required>
+                    <input value = <%= clientes.nome %> name="nome" type="text" class="form-control" id="nome" placeholder="Nome"  required>
                                                
                     <label for="email">Email</label>
-                    <input name ="email" type="text" class="form-control" id="email" placeholder="Email"  required>
+                    <input value = <%= clientes.email %> name ="email" type="text" class="form-control" id="email" placeholder="Email"  required>
               
                     <label for="foto">Foto de perfil</label>
-                    <input name="foto" type="text" class="form-control" id="foto" required>
+                    <input value = <%= clientes.foto %> name="foto" type="text" class="form-control" id="foto" required>
                 
-                    <label for="data">Data de Cadastro</label>
-                    <input name="dataCad" type="date" class="form-control datas" id="data" required>
+                    <label for="data">Data de Cadastro</label><br>
+                    <label for="data"><%= clientes.dataCadastro %></label>
                
-               
-                    <label for="dataAtualizacao">Data de Atualização</label>
+                    <label for="dataAtualizacao">Data de Atualização</label> 
                     <input name="dataupdate" type="date" class="form-control datas" id="dataAtualizacao" required>
 
-                    
-                    <div class="divbtn"> <button type="submit" id="btnsalvar" class="btn btn-outline-success">Salvar</button></div>
+                    <input name="id" value=<%= clientes.id %>></input>
+                    <div class="divbtn"> 
+                        <button type="submit" id="btnsalvar" class="btn btn-outline-success">Salvar</button>
+                    </div>
                     
             </form>
             <div>
              
                 <img class="imggirl" src="/public/img/girlogo.png" alt="logo">
             </div>
-           
+          
             </div>
+            
         </div>
     </div>
     
 </body>
-
-
-
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
     crossorigin="anonymous"></script>

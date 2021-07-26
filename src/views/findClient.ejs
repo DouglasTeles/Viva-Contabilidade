@@ -38,7 +38,7 @@
         
      </div>
     </div>
-    <% clientes.forEach(cliente =>{%>
+   
     
     <div class="container">
         <div class="card" id="form-cadastro">
@@ -51,40 +51,40 @@
                    
                     <div class="dados">
                         <label for="nome">Nome Completo:</label>
-                        <label for="nome"> <%= cliente.nome %></label> <br>
+                        <label for="nome"> <%= clientes.nome %></label> <br>
                     </div>    
               
                      <div class="dados">        
                         <label for="email">Email:</label>
-                        <label for="email"> <%= cliente.email %></label> <br>
+                        <label for="email"> <%= clientes.email %></label> <br>
                     </div>      
                   
                     <div class="dados">
                         <label for="data">Tempo de Cadastro: </label>
-                        <label for="datacadastro"><%= cliente.dataCadastro %></label><br>
+                        <label for="datacadastro"><%= clientes.dataCadastro %></label><br>
                     </div>
                
                     <div class="dados">
                         <label for="dataAtualizacao">Data de Atualização: </label>
-                        <label for="dataupdate"><%= cliente.dataAtualizacao %></label> <br>
+                        <label for="dataupdate"><%= clientes.dataAtualizacao %></label> <br>
                         
                      </div>
                     
 
                      
-                        <input name="id" type="hidden" class="form-control datas" id="id" value=<%= cliente.id %>>
+                        <input name="id" type="hidden" class="form-control datas" id="id" value=<%= clientes.id %>>
                         
                         <button  onclick="confirmacao()"  type="submit" type="button" id="excluir" class="btn btn-outline-danger">Excluir</button>  
                         <p type="hidden" id="demo"></p>
                     </form>
             <div class="div-icons" >
-                <a href="/cliente/<%=cliente.id%>/editar"><button type="button" id="editar"  class="btn btn-outline-primary">Editar</button></a>
+                <a href="/cliente/<%=clientes.id%>/editar"><button type="button" id="editar"  class="btn btn-outline-primary">Editar</button></a>
                
                 <div class="space"></div>
             </div>
 
             <div class="divimgperfil">
-                <img class="imgperfil" src=<%= cliente.foto %> alt="logo">
+                <img class="imgperfil" src=<%= clientes.foto %> alt="logo">
             </div>
            
             
@@ -92,7 +92,7 @@
         </div>
        
     </div>
-    <% }) %>
+    
    
 </body>
 

@@ -29,42 +29,6 @@ app.use(bodyParser.json())
 const routes = require('./routes')
 app.use(routes)
 
-// app.get('/cliente/novo', (req, res) => {
-//     res.render("RegisterClient")
-// })
-
-
-// app.post('/cliente/save', (req, res) => {
-//     const data = req.body
-
-//     const nome = data.nome
-//     const email = data.email
-//     const foto = data.foto
-//     const dataCadastro = data.dataCad
-//     const dataAtualizacao = data.dataupdate
-
-//     Client.create({
-//         nome,
-//         email,
-//         foto,
-//         dataCadastro,
-//         dataAtualizacao
-//     }).then(() =>{
-//         console.log("Cadastro realizado com sucesso")
-//         res.redirect("/cliente/novo")
-//     })
-
-    
-// })
-
-
-
-
-
-// app.get('/clientes', (req, res) => {
-//     res.render("listClient")
-// })
-
 
 
 app.listen(3000,()=>{
